@@ -1,4 +1,4 @@
-# 2010-11-18 Dr. Alistair Ward <regexdot at functionalley dot eu>
+# 2010-11-18 Dr. Alistair Ward <regexdot@functionalley.eu>
 
 ## 0.9.0.0
 * First version of the package.
@@ -28,7 +28,7 @@
 * Added manually controlled flag "**llvm**" to the *.cabal*-file.
 * Changed identifier for type-parameters, to better reflect its role.
 * Reacted to the creation of module "**ToolShed.Defaultable**".
-* Uploaded to [Hackage](http://hackage.haskell.org/packages/hackage.html).
+* Uploaded to [Hackage](http://hackage.haskell.org/package/regexdot).
 
 ## 0.10.2.2
 * Amended the *.cabal*-file to more correctly specify dependency on package "**toolshed**".
