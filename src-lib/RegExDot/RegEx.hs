@@ -241,7 +241,7 @@ instance (
 	readsPrec _ ('\t' : s)	= reads s	-- Consume white-space.
 	readsPrec _ s		= case reads s of
 		[(extendedRegEx, s1)]	-> case dropWhile Data.Char.isSpace s1 of
-			('|' : s2)	-> Control.Arrow.first (transformAlternatives (extendedRegEx :)) `map` reads s2 {-singleton-}
+			'|' : s2	-> Control.Arrow.first (transformAlternatives (extendedRegEx :)) `map` reads s2 {-singleton-}
 			_		-> [(MkAlternatives [extendedRegEx], s1)]
 		_			-> []	-- No parse.
 
@@ -297,7 +297,7 @@ instance (
 	readsPrec _ ('\t' : s)	= reads s	-- Consume white-space.
 	readsPrec _ ('(' : s)	= case {-Alternatives.-} reads s of
 		[(alternatives, s1)]	-> case dropWhile Data.Char.isSpace s1 of
-			(')' : s2)	-> [(CaptureGroup alternatives, s2)]
+			')' : s2	-> [(CaptureGroup alternatives, s2)]
 			_		-> []	-- No parse.
 		_			-> []	-- No parse.
 	readsPrec _ s		= case reads s of
