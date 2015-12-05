@@ -1,5 +1,7 @@
 # **RegExDot**
 
+[![Build Status](https://travis-ci.org/functionalley/RegExDot.svg?branch=master)](https://travis-ci.org/functionalley/RegExDot)
+
 This is "**RegExDot**", a polymorphic regex-engine.
 
 ## Installation
