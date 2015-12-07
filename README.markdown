@@ -1,6 +1,6 @@
 # **RegExDot**
 
-[![Build Status](https://travis-ci.org/functionalley/RegExDot.svg?branch=master)](https://travis-ci.org/functionalley/RegExDot)
+[![Hackage](https://img.shields.io/hackage/v/regexdot.svg)](https://hackage.haskell.org/package/regexdot) [![Build Status](https://travis-ci.org/functionalley/RegExDot.svg?branch=master)](https://travis-ci.org/functionalley/RegExDot)
 
 This is "**RegExDot**", a polymorphic regex-engine.
 
