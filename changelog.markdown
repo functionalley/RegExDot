@@ -66,4 +66,5 @@
 ## 0.11.1.3
 * Corrected the markdown-syntax in this file.
 * Uploaded to [GitHub](https://github.com/functionalley/RegExDot.git).
-* Added **.travis.yml** to control testing by <https://docs.travis-ci.com>.
+* Added file **.travis.yml** to control testing by <https://docs.travis-ci.com>.
+* Added file **.ghci**.
