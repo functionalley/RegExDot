@@ -1,5 +1,5 @@
 {-
-	Copyright (C) 2010 Dr. Alistair Ward
+	Copyright (C) 2010-2015 Dr. Alistair Ward
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@ module RegExDot.CompilationOptions(
 	CompilationOptions(..)
 ) where
 
-import qualified	ToolShed.Defaultable
+import qualified	Data.Default
 import qualified	ToolShed.Options
 
 -- | The switch(es) used to control compilation of the /regex/-engine.
@@ -40,8 +40,8 @@ data CompilationOptions	= MkCompilationOptions {
 	complyStrictlyWithPosix	:: Bool		-- ^ Define the offset of captured data, corresponding to a sub-expression which matched zero times, as the artificial value @-1@ specified by POSIX.
 } deriving (Eq, Show)
 
-instance ToolShed.Defaultable.Defaultable CompilationOptions	where
-	defaultValue	= ToolShed.Options.blankValue { complyStrictlyWithPosix	= True }
+instance Data.Default.Default CompilationOptions	where
+	def	= ToolShed.Options.blankValue { complyStrictlyWithPosix	= True }
 
 instance ToolShed.Options.Options CompilationOptions	where
 	blankValue	= MkCompilationOptions { complyStrictlyWithPosix = undefined }

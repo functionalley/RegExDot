@@ -2,7 +2,7 @@
 {-# OPTIONS_GHC -fno-warn-orphans #-}
 
 {-
-	Copyright (C) 2010 Dr. Alistair Ward
+	Copyright (C) 2010-2015 Dr. Alistair Ward
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -37,9 +37,9 @@ module RegExDot.RegExOpts(
 	mkRegEx
 ) where
 
+import qualified	Data.Default
 import qualified	RegExDot.CompilationOptions	as CompilationOptions
 import qualified	RegExDot.ExecutionOptions	as ExecutionOptions
-import qualified	ToolShed.Defaultable
 
 -- | Aggregates both 'ExecutionOptions.ExecutionOptions' & 'CompilationOptions.CompilationOptions' with a polymorphic /regex/, to form a complete job-description.
 data RegExOpts a	= MkRegExOpts {
@@ -51,11 +51,11 @@ data RegExOpts a	= MkRegExOpts {
 instance Functor RegExOpts	where
 	fmap f regExOpts	= regExOpts { regEx = f $ regEx regExOpts }
 
--- | Smart constructor using 'ToolShed.Defaultable.defaultValue'.
+-- | Smart constructor.
 mkRegEx :: a -> RegExOpts a
 mkRegEx	r	= MkRegExOpts {
-	compilationOptions	= ToolShed.Defaultable.defaultValue,
-	executionOptions	= ToolShed.Defaultable.defaultValue,
+	compilationOptions	= Data.Default.def,
+	executionOptions	= Data.Default.def,
 	regEx			= r
 }
 

@@ -63,8 +63,9 @@
 * Renamed directory "**src/**" to "**src-lib/**" for consistency with other packages. 
 * Used **CPP** to control the import of symbols from **Control.Applicative**.
 
-## 0.11.1.3
+## 0.12.0.0
 * Corrected the markdown-syntax in this file.
 * Uploaded to [GitHub](https://github.com/functionalley/RegExDot.git).
 * Added file **.travis.yml** to control testing by <https://docs.travis-ci.com>.
 * Added file **.ghci**.
+* Replaced use of module **ToolShed.Defaultable** with **Data.Default**.

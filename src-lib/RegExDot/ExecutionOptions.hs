@@ -1,5 +1,5 @@
 {-
-	Copyright (C) 2010 Dr. Alistair Ward
+	Copyright (C) 2010-2015 Dr. Alistair Ward
 
 	This program is free software: you can redistribute it and/or modify
 	it under the terms of the GNU General Public License as published by
@@ -35,7 +35,7 @@ module RegExDot.ExecutionOptions(
 	setVerbose
 ) where
 
-import qualified	ToolShed.Defaultable
+import qualified	Data.Default
 import qualified	ToolShed.Options
 
 -- | The switches used to control execution of the /regex/-engine.
@@ -57,8 +57,8 @@ data ExecutionOptions	= MkExecutionOptions {
 	validateMinConsumptionOfAlternatives	:: Bool		-- ^ When the number of repetitions of a /RegExDot.RegEx.CaptureGroup/ is precisely specified, check whether the resulting minimum data-requirement is available.
 } deriving (Eq, Show)
 
-instance ToolShed.Defaultable.Defaultable ExecutionOptions	where
-	defaultValue	= setVerbose False $ ToolShed.Options.blankValue {
+instance Data.Default.Default ExecutionOptions	where
+	def = setVerbose False $ ToolShed.Options.blankValue {
 		abortTrialRepetitionsOnInherentFailure	= True,		-- Regrettably, this slightly reduces performance for most non-pathological patterns.
 		catchIncompatibleAnchors		= True,
 		checkExistenceOfInelasticTail		= True,
