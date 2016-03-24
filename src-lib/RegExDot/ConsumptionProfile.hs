@@ -68,13 +68,11 @@ data ConsumptionProfile	= MkConsumptionProfile {
 } deriving (Eq, Read, Show)
 
 instance ToolShed.SelfValidate.SelfValidator ConsumptionProfile	where
-	getErrors c@(
-		MkConsumptionProfile {
-			consumptionBounds	= (fewest, most),
-			hasSpecificRequirement	= hasSpecificRequirement',
-			canConsumeAnything	= canConsumeAnything'
-		}
-	 ) = ToolShed.SelfValidate.extractErrors [
+	getErrors c@ MkConsumptionProfile {
+		consumptionBounds	= (fewest, most),
+		hasSpecificRequirement	= hasSpecificRequirement',
+		canConsumeAnything	= canConsumeAnything'
+	} = ToolShed.SelfValidate.extractErrors [
 		(fewest < 0, "Negative fewest=" ++ show fewest ++ "."),
 		(
 			case most of
