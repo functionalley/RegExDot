@@ -836,7 +836,7 @@ findMatch regExOpts@RegExOpts.MkRegExOpts {
  using a single repetition of 'concatenationFromAlternative' followed by a replacement infallible 'concatenationTail'.
 -}
 										then {-#SCC "abortTrialRepetitionsOnInherentFailure" #-} case maybeMatchPairList of
-											(Nothing {-failed attempt-} : _ {-subsequent attempt worth bypassing-} : _)	-> if (
+											Nothing {-failed attempt-} : _ {-subsequent attempt worth bypassing-} : _	-> if (
 												minConsumptionConcatenationFromAlternative == 0	-- Can delegate consumption of unconsumable data to the infallible tail => unprovable culpability.
 											 ) || inputData =~ RegExOpts.mkRegEx MkExtendedRegEx {
 												bowAnchor	= Just Anchor.Bow,
