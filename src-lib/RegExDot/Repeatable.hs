@@ -29,7 +29,7 @@
 
 	* In the context of /regex/es, this concept is known as /Quantification/.
 
-	* /regex/es evolved from the minimal ability to optionally qualify the datum with a <http://en.wikipedia.org/wiki/Kleene_star> suffix.
+	* /regex/es evolved from the minimal ability to optionally qualify the datum with a <https://en.wikipedia.org/wiki/Kleene_star> suffix.
 	More exotic repetition-specifications could be composed by concatenating these atomic building-blocks.
 	Here, I've taken the contrary top-down view, & assumed that all data are qualified by a full 'RepetitionBounds', which in most cases will degenerate into a simpler form.
 

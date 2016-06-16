@@ -53,7 +53,7 @@ import qualified	RegExDot.ConsumptionProfile	as ConsumptionProfile
 {- |
 	* A measure of the complexity of a /regex/, which has some baring on either the time-complexity or the space-complexity of the solution.
 
-	* <http://en.wikipedia.org/wiki/Star_height>
+	* <https://en.wikipedia.org/wiki/Star_height>
 -}
 type StarHeight	= Int
 

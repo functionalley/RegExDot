@@ -19,7 +19,7 @@
 
  [@DESCRIPTION@]
 
-	* Defines a specific type of tree-structure, which is composed from either a datum, or a list of Tree-lists; <http://en.wikipedia.org/wiki/Rose_Tree>.
+	* Defines a specific type of tree-structure, which is composed from either a datum, or a list of Tree-lists; <https://en.wikipedia.org/wiki/Rose_Tree>.
 
 	* This more general tree-structure has the shape of a regular-expression match.
 

@@ -50,7 +50,7 @@
 
  [@REFERENCES@]
 
-	* <http://en.wikipedia.org/wiki/Regular_expression>
+	* <https://en.wikipedia.org/wiki/Regular_expression>
 
 	* <http://swtch.com/~rsc/regexp/regexp1.html>
 
