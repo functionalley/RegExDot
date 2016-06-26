@@ -246,7 +246,7 @@ instance (
 		_			-> []	-- No parse.
 
 instance Show m => Show (Alternatives m)	where
-	showsPrec _	= foldl (.) (showString "") . Data.List.intersperse (showChar alternativeExtendedRegExSeparatorToken) . map shows . deconstructAlternatives	-- Replace the default list-format, with 'egrep'-syntax.
+	showsPrec _	= foldl (.) id . Data.List.intersperse (showChar alternativeExtendedRegExSeparatorToken) . map shows . deconstructAlternatives	-- Replace the default list-format, with 'egrep'-syntax.
 
 instance Consumer.Consumer (Alternatives m)	where
 	consumptionProfile	= Consumer.aggregateConsumptionProfilesFromAlternatives . deconstructAlternatives
