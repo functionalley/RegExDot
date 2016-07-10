@@ -148,9 +148,10 @@ module RegExDot.RegEx(
 	showsMaybeAnchor,
 	simply,
 	transformExtendedRegEx,
--- ** Accessors (Deconstructors)
-	deconstructAlternatives,
+-- ** Accessors
 --	getInputData,
+-- ** Deconstructor
+	deconstructAlternatives,
 -- ** Operators
 	(+~),
 	(=~),

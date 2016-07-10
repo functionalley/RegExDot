@@ -24,7 +24,7 @@
 
 module RegExDot.Result(
 -- * Functions
--- ** Accessors (Deconstructors)
+-- ** Accessors
 	getMatchList,
 	getPreMatch,
 	getPostMatch,
