@@ -33,7 +33,7 @@ module RegExDot.RegExOpts(
 	RegExOpts(..),
 -- * Functions
 	setVerbose,
--- ** Constructors
+-- ** Constructor
 	mkRegEx
 ) where
 
