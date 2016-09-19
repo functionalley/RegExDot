@@ -121,7 +121,10 @@ module RegExDot.RegEx(
 	RepeatablePattern,
 --	Transformation,
 -- ** Data-types
-	Alternatives(..),
+	Alternatives(
+		MkAlternatives,
+		deconstructAlternatives
+	),
 	Match,
 	ExtendedRegEx(..),
 	Pattern(..),
@@ -150,8 +153,6 @@ module RegExDot.RegEx(
 	transformExtendedRegEx,
 -- ** Accessors
 --	getInputData,
--- ** Deconstructor
-	deconstructAlternatives,
 -- ** Operators
 	(+~),
 	(=~),
@@ -219,11 +220,9 @@ class ShortcutExpander m	where
 
 	* One could amalgamate this with 'Pattern', since it seems to exist merely as a peg to hang /instance/-declarations from.
 -}
-newtype Alternatives m	= MkAlternatives [ExtendedRegEx m]	deriving Eq
-
--- | Accessor, to expose the guts.
-deconstructAlternatives :: Alternatives m -> [ExtendedRegEx m]
-deconstructAlternatives (MkAlternatives extendedRegExList)	= extendedRegExList
+newtype Alternatives m	= MkAlternatives {
+	deconstructAlternatives	:: [ExtendedRegEx m]
+} deriving Eq
 
 -- | Similar to 'fmap', but operates on ['ExtendedRegEx'], rather than just @a@.
 transformAlternatives
