@@ -90,7 +90,7 @@ import			Text.ParserCombinators.Parsec((<?>))
 import qualified	ToolShed.Data.Pair
 import qualified	ToolShed.SelfValidate
 
-#if !defined(MIN_VERSION_base) || !MIN_VERSION_base(4,8,0)
+#if !MIN_VERSION_base(4,8,0)
 import	Control.Applicative((<$>), (<*>))
 #endif
 

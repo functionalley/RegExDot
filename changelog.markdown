@@ -73,3 +73,4 @@
 * Tested with **ghc-8.0.1**.
 ## 0.12.0.1
 * Checked that pre-processor macros are defined.
+## 0.12.1.0
