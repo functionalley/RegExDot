@@ -662,11 +662,9 @@ findMatch regExOpts@RegExOpts.MkRegExOpts {
 			] = Nothing
 			| otherwise	= {-#SCC "findMatchSlave" #-} let
 				tailConsumptionProfile :: ConsumptionProfile.ConsumptionProfile
-				tailConsumptionProfile@(
-					ConsumptionProfile.MkConsumptionProfile {
-						ConsumptionProfile.consumptionBounds	= (minConsumptionConcatenationTail, maybeMaxConsumptionConcatenationTail)
-					}
-				 ) = head accumulatedConsumptionProfilesTail	-- Extract the aggregate consumption-profile, of the tail of the 'Concatenation'.
+				tailConsumptionProfile@ConsumptionProfile.MkConsumptionProfile {
+					ConsumptionProfile.consumptionBounds	= (minConsumptionConcatenationTail, maybeMaxConsumptionConcatenationTail)
+				} = head accumulatedConsumptionProfilesTail	-- Extract the aggregate consumption-profile, of the tail of the 'Concatenation'.
 
 				maxDataAvailable :: ConsumptionBounds.DataLength
 				maxDataAvailable	= inputDataLength - minConsumptionConcatenationTail	-- The maximum data available to match 'repeatablePatternHead'.
