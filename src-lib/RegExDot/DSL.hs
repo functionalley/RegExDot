@@ -55,51 +55,51 @@ infixr 5 -:, ?:, ??:, *:, *?:, +:, +?:,#->#:, #->#?:, #->:, #->?:, #:, <~>	-- Sa
 
 -- | Prepend an unrepeated 'RegEx.Pattern', to the specified 'RegEx.Concatenation'.
 (-:) :: RegEx.Pattern a -> RegEx.Concatenation a -> RegEx.Concatenation a
-(-:) pattern	= (Repeatable.one pattern :)
+(-:) pat	= (Repeatable.one pat :)
 
 -- | Prepend an optional 'RegEx.Pattern', to the specified 'RegEx.Concatenation'.
 (?:) :: RegEx.Pattern a -> RegEx.Concatenation a -> RegEx.Concatenation a
-(?:) pattern	= (Repeatable.zeroOrOne pattern :)
+(?:) pat	= (Repeatable.zeroOrOne pat :)
 
 -- | A /non-greedy/ version of '?:'.
 (??:) :: RegEx.Pattern a -> RegEx.Concatenation a -> RegEx.Concatenation a
-(??:) pattern	= (Repeatable.zeroOrOne' pattern :)
+(??:) pat	= (Repeatable.zeroOrOne' pat :)
 
 -- | Prepend a 'RegEx.Pattern', repeatable zero or more times, to the specified 'RegEx.Concatenation'.
 (*:) :: RegEx.Pattern a -> RegEx.Concatenation a -> RegEx.Concatenation a
-(*:) pattern	= (Repeatable.zeroOrMore pattern :)
+(*:) pat	= (Repeatable.zeroOrMore pat :)
 
 -- | A /non-greedy/ version of '*:'.
 (*?:) :: RegEx.Pattern a -> RegEx.Concatenation a -> RegEx.Concatenation a
-(*?:) pattern	= (Repeatable.zeroOrMore' pattern :)
+(*?:) pat	= (Repeatable.zeroOrMore' pat :)
 
 -- | Prepend a 'RegEx.Pattern', repeatable one or more times, to the specified 'RegEx.Concatenation'.
 (+:) :: RegEx.Pattern a -> RegEx.Concatenation a -> RegEx.Concatenation a
-(+:) pattern	= (Repeatable.oneOrMore pattern :)
+(+:) pat	= (Repeatable.oneOrMore pat :)
 
 -- | A /non-greedy/ version of '+:'.
 (+?:) :: RegEx.Pattern a -> RegEx.Concatenation a -> RegEx.Concatenation a
-(+?:) pattern	= (Repeatable.oneOrMore' pattern :)
+(+?:) pat	= (Repeatable.oneOrMore' pat :)
 
 -- | Prepend a 'RegEx.Pattern', repeated a range of times, to the specified 'RegEx.Concatenation'.
 ( #->#:) :: (RegEx.Pattern a, Repeatable.RepetitionBounds) -> RegEx.Concatenation a -> RegEx.Concatenation a
-( #->#:) (pattern, bounds)	= (pattern ^#-># bounds :)
+( #->#:) (pat, bounds)	= (pat ^#-># bounds :)
 
 -- | A /non-greedy/ version of '#->#:'.
 ( #->#?:) :: (RegEx.Pattern a, Repeatable.RepetitionBounds) -> RegEx.Concatenation a -> RegEx.Concatenation a
-( #->#?:) (pattern, bounds)	= (pattern ^#->#? bounds :)
+( #->#?:) (pat, bounds)	= (pat ^#->#? bounds :)
 
 -- | Prepend a 'RegEx.Pattern', repeated at least a specified number of times, to the specified 'RegEx.Concatenation'.
 ( #->:) :: (RegEx.Pattern a, Repeatable.Repetitions) -> RegEx.Concatenation a -> RegEx.Concatenation a
-( #->:) (pattern, fewest)	= (pattern ^#-> fewest :)
+( #->:) (pat, fewest)	= (pat ^#-> fewest :)
 
 -- | A /non-greedy/ version of '#->:'.
 ( #->?:) :: (RegEx.Pattern a, Repeatable.Repetitions) -> RegEx.Concatenation a -> RegEx.Concatenation a
-( #->?:) (pattern, fewest)	= (pattern ^#->? fewest :)
+( #->?:) (pat, fewest)	= (pat ^#->? fewest :)
 
 -- | Prepend a 'RegEx.Pattern', repeated a precise number of times, to the specified 'RegEx.Concatenation'.
 ( #:) :: (RegEx.Pattern a, Repeatable.Repetitions) -> RegEx.Concatenation a -> RegEx.Concatenation a
-( #:) (pattern, r)	= (pattern ^# r :)
+( #:) (pat, r)	= (pat ^# r :)
 
 {- |
 	* Sandwiches a 'RegEx.Concatenation' between optional 'Anchor.Anchor's to construct a 'RegEx.ExtendedRegEx'.

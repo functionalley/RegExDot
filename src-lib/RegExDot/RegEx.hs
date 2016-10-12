@@ -334,7 +334,7 @@ isCaptureGroup _		= False
 
 -- | The set of distinct 'Meta.Meta', in the specified 'Pattern'.
 getDistinctMetaDataFromPattern :: Eq m => Pattern m -> MetaDataList m
-getDistinctMetaDataFromPattern pattern	= case pattern of
+getDistinctMetaDataFromPattern pat	= case pat of
 	Require meta			-> [meta]
 	CaptureGroup alternatives	-> getDistinctMetaDataFromAlternatives alternatives
 
