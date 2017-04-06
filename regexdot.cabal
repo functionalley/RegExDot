@@ -87,6 +87,10 @@ Library
     else
         GHC-prof-options:	-auto-all -caf-all
 
-    if impl(ghc >= 7.0) && flag(llvm)
-        GHC-options:	-fllvm
+    if impl(ghc >= 7.0)
+        if flag(llvm)
+            GHC-options:	-fllvm
+
+        if impl(ghc >= 8.0)
+            GHC-options:	-Wredundant-constraints
 
