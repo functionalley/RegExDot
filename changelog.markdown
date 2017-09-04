@@ -71,7 +71,9 @@
 * Replaced use of module **ToolShed.Defaultable** with **Data.Default**.
 * Reimplemented **RegExDot.RegEx.deconstruct** using record-syntax.
 * Tested with **ghc-8.0.1**.
+
 ## 0.12.0.1
 * Checked that pre-processor macros are defined.
+
 ## 0.12.1.0
 * Replaced the identifer **pattern**, since this becomes a Haskell-keyword when **PatternSynonyms** are enabled.
