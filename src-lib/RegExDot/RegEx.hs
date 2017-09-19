@@ -895,7 +895,7 @@ findMatch regExOpts@RegExOpts.MkRegExOpts {
 													concat $ replicate repetitions consumptionProfileConcatenationFromAlternative,
 													concat $ replicate repetitions concatenationFromAlternative	-- Expand all repetitions of the single alternative.
 												)
-												| otherwise {-choice of Alternatives or has Anchor.Bow-}	=  let
+												| otherwise {-choice of Alternatives or has Anchor.Bow-}	= let
 													remainingRepetitions :: Repeatable.Repetitions
 													remainingRepetitions	= pred repetitions	-- Expand just the first repetition of the set of 'Alternatives'.
 
