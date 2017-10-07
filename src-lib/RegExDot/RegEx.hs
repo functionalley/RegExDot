@@ -183,9 +183,9 @@ import			Control.Arrow((&&&))
 import qualified	Control.Arrow
 import qualified	Control.DeepSeq
 import qualified	Control.Parallel.Strategies
-import qualified	Data.Char
 import qualified	Data.Foldable
 import qualified	Data.List
+import qualified	Data.List.Extra
 import qualified	Data.Maybe
 import qualified	Data.Ord
 import qualified	RegExDot.Anchor			as Anchor
@@ -240,7 +240,7 @@ instance (
 	readsPrec _ (' ' : s)	= reads s	-- Consume white-space.
 	readsPrec _ ('\t' : s)	= reads s	-- Consume white-space.
 	readsPrec _ s		= case reads s of
-		[(extendedRegEx, s1)]	-> case dropWhile Data.Char.isSpace s1 of
+		[(extendedRegEx, s1)]	-> case Data.List.Extra.trimStart s1 of
 			'|' : s2	-> Control.Arrow.first (transformAlternatives (extendedRegEx :)) `map` reads s2 {-singleton-}
 			_		-> [(MkAlternatives [extendedRegEx], s1)]
 		_			-> []	-- No parse.
@@ -296,7 +296,7 @@ instance (
 	readsPrec _ (' ' : s)	= reads s	-- Consume white-space.
 	readsPrec _ ('\t' : s)	= reads s	-- Consume white-space.
 	readsPrec _ ('(' : s)	= case {-Alternatives.-} reads s of
-		[(alternatives, s1)]	-> case dropWhile Data.Char.isSpace s1 of
+		[(alternatives, s1)]	-> case Data.List.Extra.trimStart s1 of
 			')' : s2	-> [(CaptureGroup alternatives, s2)]
 			_		-> []	-- No parse.
 		_			-> []	-- No parse.

@@ -78,6 +78,7 @@ Library
         base == 4.*,
         data-default,
         deepseq >= 1.1,
+        extra,
         parallel >= 3.0,
         parsec == 3.*,
         toolshed >= 0.17
