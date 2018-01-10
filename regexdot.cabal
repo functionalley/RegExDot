@@ -83,15 +83,15 @@ Library
         parsec == 3.*,
         toolshed >= 0.17
 
-    if impl(ghc >= 7.4.1)
-        GHC-prof-options:	-fprof-auto -fprof-cafs
-    else
-        GHC-prof-options:	-auto-all -caf-all
-
     if impl(ghc >= 7.0)
         if flag(llvm)
             GHC-options:	-fllvm
 
-        if impl(ghc >= 8.0)
-            GHC-options:	-Wredundant-constraints
+        if impl(ghc >= 7.4.1)
+            GHC-prof-options:	-fprof-auto -fprof-cafs
+    
+            if impl(ghc >= 8.0)
+                GHC-options:	-j -Wredundant-constraints
+        else
+            GHC-prof-options:	-auto-all -caf-all
 
