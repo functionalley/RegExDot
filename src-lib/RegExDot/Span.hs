@@ -12,7 +12,7 @@
 	GNU General Public License for more details.
 
 	You should have received a copy of the GNU General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 -}
 {- |
  [@AUTHOR@]	Dr. Alistair Ward
@@ -36,7 +36,7 @@ import qualified	RegExDot.ConsumptionBounds	as ConsumptionBounds
 {- |
 	* The offset & length of a specific data-sequence, within a wider list.
 
-	* Similar to <http://hackage.haskell.org/packages/archive/regex-base/latest/doc/html/Text-Regex-Base-RegexLike.html#t%3AMatchArray>.
+	* Similar to <https://hackage.haskell.org/packages/archive/regex-base/latest/doc/html/Text-Regex-Base-RegexLike.html#t%3AMatchArray>.
 -}
 type Span	= (ConsumptionBounds.DataLength {-offset-}, ConsumptionBounds.DataLength)
 

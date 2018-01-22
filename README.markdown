@@ -10,7 +10,7 @@ It can be built and installed using [Cabal](https://www.haskell.org/cabal/users-
 
 ## Documentation
 
-More information about this library can be found at [RegExDot](http://functionalley.eu/RegExDot/regExDot.html).
+More information about this library can be found at [RegExDot](https://functionalley.eu/RegExDot/regExDot.html).
 
 ## License
 

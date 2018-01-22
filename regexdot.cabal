@@ -26,7 +26,7 @@ Build-type:	Simple
 Description:	Provides a portable, POSIX, extended regex-engine, designed to process a list of /arbitrary/ objects.
 Category:	Search, Regex
 Tested-with:	GHC == 7.4, GHC == 7.6, GHC == 7.8, GHC == 7.10, GHC == 8.0, GHC == 8.2
-Homepage:	http://functionalley.eu/RegExDot/regExDot.html
+Homepage:	https://functionalley.eu/RegExDot/regExDot.html
 Maintainer:	mailto:regexdot@functionalley.eu
 Bug-reports:	mailto:regexdot@functionalley.eu
 

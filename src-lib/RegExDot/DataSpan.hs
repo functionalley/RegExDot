@@ -12,7 +12,7 @@
 	GNU General Public License for more details.
 
 	You should have received a copy of the GNU General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 -}
 {- |
  [@AUTHOR@]	Dr. Alistair Ward
@@ -37,7 +37,7 @@ import qualified	RegExDot.Span			as Span
 {- |
 	* Augment 'Span.Span' with a copy of the data to which it refers.
 
-	* Similar to <http://hackage.haskell.org/packages/archive/regex-base/latest/doc/html/Text-Regex-Base-RegexLike.html#t%3AMatchText>.
+	* Similar to <https://hackage.haskell.org/packages/archive/regex-base/latest/doc/html/Text-Regex-Base-RegexLike.html#t%3AMatchText>.
 -}
 type DataSpan a	= ([a], Span.Span)
 

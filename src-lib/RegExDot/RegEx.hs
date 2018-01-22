@@ -12,7 +12,7 @@
 	GNU General Public License for more details.
 
 	You should have received a copy of the GNU General Public License
-	along with this program.  If not, see <http://www.gnu.org/licenses/>.
+	along with this program.  If not, see <https://www.gnu.org/licenses/>.
 -}
 {- |
  [@AUTHOR@]	Dr. Alistair Ward
@@ -46,23 +46,23 @@
 
 	* Char-based regexen, traditionally overload the delimiters of a set of 'Alternatives' (parentheses), as a request for data-capture.
 	Here, in contrast, all 'RepeatablePattern's capture data, & repeated sub-expressions capture a list of data,
-	rather than arbitrarily recording just the last (<http://www.opengroup.org/onlinepubs/009695399/functions/regcomp.html>) item.
+	rather than arbitrarily recording just the last (<https://www.opengroup.org/onlinepubs/009695399/functions/regcomp.html>) item.
 
  [@REFERENCES@]
 
 	* <https://en.wikipedia.org/wiki/Regular_expression>
 
-	* <http://swtch.com/~rsc/regexp/regexp1.html>
+	* <https://swtch.com/~rsc/regexp/regexp1.html>
 
-	* <http://docstore.mik.ua/orelly/perl/prog/ch02_04.htm#PERL2-CH-2-SECT-4.1.2>
+	* <https://docstore.mik.ua/orelly/perl/prog/ch02_04.htm#PERL2-CH-2-SECT-4.1.2>
 
-	* <http://www.macs.hw.ac.uk/~dsg/gph/papers/html/Strategies/strategies.html>
+	* <https://www.macs.hw.ac.uk/~dsg/gph/papers/html/Strategies/strategies.html>
 
-	* <http://hackage.haskell.org/packages/archive/regex-posix/latest/doc/html/Text-Regex-Posix.html>
+	* <https://hackage.haskell.org/packages/archive/regex-posix/latest/doc/html/Text-Regex-Posix.html>
 
-	* <http://www.haskell.org/haskellwiki/Regular_expressions>
+	* <https://www.haskell.org/haskellwiki/Regular_expressions>
 
-	* <http://www2.research.att.com/~gsf/testregex/re-interpretation.html>
+	* <https://www2.research.att.com/~gsf/testregex/re-interpretation.html>
 
  [@CAVEATS@]
 
@@ -1044,7 +1044,7 @@ findMatch regExOpts@RegExOpts.MkRegExOpts {
 	this causes the data-consumption to flow towards earlier repetitions for greedy capture-groups, & towards later repetitions in non-greedy ones,
 	thus mimicking the behaviour of the unrolled repetition.
 
-	* PS: more precise criteria are defined in <http://www2.research.att.com/~gsf/testregex/re-interpretation.html>.
+	* PS: more precise criteria are defined in <https://www2.research.att.com/~gsf/testregex/re-interpretation.html>.
 -}
 											\match -> let
 												dataLengthCriterion :: InputData m -> Rational
