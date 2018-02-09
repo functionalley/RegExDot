@@ -1,6 +1,9 @@
 # **RegExDot**
 
-[![Hackage](https://img.shields.io/hackage/v/regexdot.svg)](https://hackage.haskell.org/package/regexdot) [![Build Status](https://travis-ci.org/functionalley/RegExDot.svg?branch=master)](https://travis-ci.org/functionalley/RegExDot)
+[![Build Status](https://travis-ci.org/functionalley/RegExDot.svg?branch=master)](https://travis-ci.org/functionalley/RegExDot)
+[![Hackage](https://img.shields.io/hackage/v/regexdot.svg)](https://hackage.haskell.org/package/regexdot)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+[![Haskell](https://b.repl.ca/v1/language-haskell-yellow.png)](https://haskell.org)
 
 This is "**RegExDot**", a polymorphic regex-engine.
 
