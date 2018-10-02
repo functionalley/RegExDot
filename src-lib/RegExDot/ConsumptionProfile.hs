@@ -49,6 +49,10 @@ import qualified	Data.Maybe
 import qualified	RegExDot.ConsumptionBounds	as ConsumptionBounds
 import qualified	ToolShed.SelfValidate
 
+#if MIN_VERSION_base(4,11,0)
+import	Prelude hiding ((<>))	-- N.B.: avoid ambiguity with '(Data.Semigroup.<>)'.
+#endif
+
 #if !MIN_VERSION_base(4,8,0)
 import	Control.Applicative((<$>), (<*>))
 #endif

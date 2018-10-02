@@ -1,3 +1,4 @@
+{-# LANGUAGE CPP #-}
 {-
 	Copyright (C) 2010 Dr. Alistair Ward
 
@@ -49,6 +50,10 @@ import			RegExDot.ConsumptionProfile((<>), (|+|))
 import qualified	Data.List
 import qualified	RegExDot.ConsumptionBounds	as ConsumptionBounds
 import qualified	RegExDot.ConsumptionProfile	as ConsumptionProfile
+
+#if MIN_VERSION_base(4,11,0)
+import	Prelude hiding ((<>))	-- N.B.: avoid ambiguity with '(Data.Semigroup.<>)'.
+#endif
 
 {- |
 	* A measure of the complexity of a /regex/, which has some baring on either the time-complexity or the space-complexity of the solution.

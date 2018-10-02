@@ -77,3 +77,6 @@
 
 ## 0.12.1.0
 * Replaced the identifer **pattern**, since this becomes a Haskell-keyword when **PatternSynonyms** are enabled.
+
+## 0.12.1.1
+* Accounted for **Prelude** exporting **(Data.Semigroup.<>)**.
