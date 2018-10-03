@@ -80,3 +80,6 @@
 
 ## 0.12.1.1
 * Accounted for **Prelude** exporting **(Data.Semigroup.<>)**.
+
+## 0.12.2.0
+* Bumped version.
