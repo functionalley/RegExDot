@@ -1,4 +1,4 @@
-# 2010-11-18 Dr. Alistair Ward <regexdot@functionalley.eu>
+# 2010-11-18 Dr. Alistair Ward <regexdot@functionalley.com>
 
 ## 0.9.0.0
 * First version of the package.
@@ -83,3 +83,6 @@
 
 ## 0.12.2.0
 * Bumped version.
+
+## 0.12.2.1
+Changed references to author's domain-name.

@@ -13,7 +13,7 @@ It can be built and installed using [Cabal](https://www.haskell.org/cabal/users-
 
 ## Documentation
 
-More information about this library can be found at [RegExDot](https://functionalley.eu/RegExDot/regExDot.html).
+More information about this library can be found at [RegExDot](https://functionalley.com/RegExDot/regExDot.html).
 
 ## License
 
@@ -21,7 +21,7 @@ For information on copying and distributing this package, see the file "**LICENS
 
 ## Bug-reporting
 
-Bug-reports should be emailed to <regexdot@functionalley.eu>.
+Bug-reports should be emailed to <regexdot@functionalley.com>.
 
 ## Author
 
