@@ -86,3 +86,6 @@
 
 ## 0.12.2.1
 Changed references to author's domain-name.
+
+## 0.12.2.2
+Updated list of test-compilers.
